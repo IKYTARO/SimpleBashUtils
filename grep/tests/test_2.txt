@@ -1,0 +1,15 @@
+#include <stdlib.h>
+
+int string_length(char const *str) {
+    int size = 0;
+    while (str[size] != '\0')
+        size++;
+    return size;
+}
+
+int s21_strcmp(const char *str1, const char *str2) {
+    int s1 = string_length(str1);
+    int s2 = string_length(str2);
+    int cmp = (s1 == s2 ? 0 : (s1 > s2 ? 1 : (-1)));
+    return cmp;
+}
