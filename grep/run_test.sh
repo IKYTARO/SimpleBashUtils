@@ -3,11 +3,11 @@ echo "------------------------------------------ Start testing -----------------
 echo " "
 
 echo "Response to unrecognized option:"
-./s21_grep -t test/test_1.txt
+./my_grep -t test/test_1.txt
 echo " "
 
 echo "Response to file opening error:"
-./s21_grep -e pattern nofile.txt
+./my_grep -e pattern nofile.txt
 
 pattern=int
 
@@ -18,10 +18,10 @@ do
     echo "Options $options:"
     for test_file in  tests/*.txt
     do
-        ./s21_grep $options $pattern $test_file > s21_grep_single.out
+        ./my_grep $options $pattern $test_file > s21_grep_single.out
         grep $options $pattern $test_file > grep_single.out
 
-        ./s21_grep $options $pattern $test_file tests/test_2.txt > s21_grep_double.out
+        ./my_grep $options $pattern $test_file tests/test_2.txt > s21_grep_double.out
         grep $options $pattern $test_file tests/test_2.txt > grep_double.out
 
         if cmp -s s21_grep_single.out grep_single.out && cmp -s s21_grep_double.out grep_double.out; then

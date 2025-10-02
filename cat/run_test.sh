@@ -3,11 +3,11 @@ echo "------------------------------------------ Start testing -----------------
 echo " "
 
 echo "Response to unrecognized option:"
-./s21_cat -q tests/test_1.txt
+./my_cat -q tests/test_1.txt
 echo " "
 
 echo "Response to file opening error:"
-./s21_cat -b nofile.txt
+./my_cat -b nofile.txt
 
 for options in -b -e -n -s -t -v -ben -nst -vtb -ens -benstv
 do
@@ -16,7 +16,7 @@ do
     echo "Options $options:"
     for test_file in  tests/*.txt
     do
-        ./s21_cat $options $test_file > s21_cat.out
+        ./my_cat $options $test_file > s21_cat.out
         cat $options $test_file > cat.out
 
         if cmp -s s21_cat.out cat.out; then
