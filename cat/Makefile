@@ -2,10 +2,10 @@ CC     = gcc
 CFLAGS = -Wall -Werror -Wextra -std=c11
 
 SOURCES = cat_utils.c cat.c
-TARGET  = s21_cat
+TARGET  = my_cat
 
-all: s21_cat 
-s21_cat: $(TARGET)
+all: my_cat 
+my_cat: $(TARGET)
 
 $(TARGET):
 	$(CC) $(CFLAGS) $(SOURCES) -o $@

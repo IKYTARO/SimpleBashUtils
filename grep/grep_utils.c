@@ -25,9 +25,9 @@ static void print_help_message() {
         "Grep was first included in version 4 of Unix. Noting that it is \"generally cited as the\n\
 prototypical software tool\", McIlroy credited grep with \"irrevocably entrenching\" Thompson's tool\n\
 philosophy in Unix.\n\n\
-Usage: grep [OPTION]... PATTERNS [FILE]...\n\
+Usage: ./my_grep [OPTION]... PATTERNS [FILE]...\n\
 Search for PATTERNS in each FILE.\n\
-Example: grep -i 'hello world' menu.h main.c\n\n\
+Example: ./my_grep -i 'hello world' menu.h main.c\n\n\
 Pattern selection and interpretation:\n\
     -e, --regexp=PATTERNS     use PATTERNS for matching\n\
     -f, --file=FILE           take PATTERNS from FILE\n\

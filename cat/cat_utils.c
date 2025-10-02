@@ -19,7 +19,7 @@ static void print_help_message() {
         "Cat is one of the most frequently used commands on Unix-like operating systems. It\n\
 has three related functions with regard to text files: displaying them, combining\n\
 copies of them and creating new ones.\n\n\
-Usage: cat [OPTION] [FILE]...\n\n\
+Usage: ./my_cat [OPTION] [FILE]...\n\n\
 Options:\n\
     -b, --number-nonblank   numbers only non-empty lines\n\
     -e                      equivalent to -vE\n\

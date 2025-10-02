@@ -2,10 +2,10 @@ CC     = gcc
 CFLAGS = -Wall -Werror -Wextra -std=c11
 
 SOURCES = grep.c grep_utils.c pattern_utils.c
-TARGET  = s21_grep
+TARGET  = my_grep
 
-all: s21_grep
-s21_grep: $(TARGET)
+all: my_grep
+my_grep: $(TARGET)
 
 $(TARGET):
 	$(CC) $(CFLAGS) $(SOURCES) -o $@
